@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 // React
 import { FC } from "react";
@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // MUI
-// import { Box } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 
 // Icons
 import authPoster from "../../../assets/auth/authPoster.png";
@@ -30,11 +30,29 @@ const page: FC<pageProps> = ({}) => {
             width={106}
             height={36}
           />
-          <div>
-            <p>Already have an account?</p>
-            <Link href="/signIn">Sign in</Link>
+          <div className={s.authHeaderNavWrapper}>
+            <p className={s.authHeaderText}>
+              Already have an account?
+            </p>
+            <Link
+              className={s.authHeaderLink}
+              href="/signIn"
+            >
+              Sign in
+            </Link>
           </div>
         </header>
+        <div className={s.formWrapper}>
+          <form>
+            <TextField
+              id="filled-textarea"
+              label="Multiline Placeholder"
+              placeholder="Placeholder"
+              multiline
+              variant="filled"
+            />
+          </form>
+        </div>
       </div>
       <div className={s.authIconWrapper}>
         <Image
