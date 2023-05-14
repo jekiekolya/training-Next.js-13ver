@@ -1,4 +1,11 @@
+"use client";
+
 import "./globals.scss";
+import { lightTheme } from "./theme/lightTheme";
+import {
+  ThemeProvider,
+  CssBaseline,
+} from "@mui/material";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,7 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <ThemeProvider theme={lightTheme}>
+        <CssBaseline />
+        <body className={inter.className}>
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

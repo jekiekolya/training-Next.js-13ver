@@ -1,0 +1,21 @@
+.authContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.authFormWrapper {
+  width: calc((800 / 1440) * 100%);
+
+  height: 100%;
+}
+
+.authIconWrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
+  background-color: #f8f9faff;
+}
